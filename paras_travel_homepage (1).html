@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paras Travel Solutions</title>
+
+<style>
+body { margin:0; font-family: Arial, sans-serif; }
+.hero {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+  height: 90vh; color:white; display:flex; flex-direction:column; justify-content:center; text-align:center;
+  background-color: rgba(0,0,0,0.5); background-blend-mode: darken;
+}
+.hero h1 { font-size:42px; }
+.btn { background:#ff6b00; color:white; padding:12px 25px; margin-top:15px; text-decoration:none; border-radius:5px; display:inline-block; }
+section { padding:40px 20px; text-align:center; }
+.packages { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.card { width:280px; border:1px solid #ddd; border-radius:10px; overflow:hidden; }
+.card img { width:100%; }
+footer { background:#023e8a; color:white; padding:15px; }
+input, textarea {
+  width:80%; padding:10px; margin:8px; border:1px solid #ccc; border-radius:5px;
+}
+.whatsapp-float {
+  position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
+  padding:15px; border-radius:50%; text-decoration:none; font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Explore the World with Paras Travel Solutions</h1>
+  <p>Dubai | Europe | Bali Deals at Best Prices</p>
+  <a class="btn" href="https://wa.me/917986802934?text=Hi%20I%20am%20interested%20in%20a%20tour%20package">Get Best Deal on WhatsApp</a>
+</div>
+
+<section>
+  <h2>🔥 Trending Packages</h2>
+  <div class="packages">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+      <h3>Dubai Package</h3>
+      <p>₹45,000 onwards</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+      <h3>Europe Tour</h3>
+      <p>₹1,20,000 onwards</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846">
+      <h3>Thailand Package</h3>
+      <p>₹35,000 onwards</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def">
+      <h3>Malaysia Package</h3>
+      <p>₹40,000 onwards</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>✈️ Our Services</h2>
+  <ul style="list-style:none; padding:0; font-size:18px;">
+    <li>🌍 International & Domestic Flight Ticket Booking</li>
+    <li>🏨 Hotel Booking (Worldwide)</li>
+    <li>🛂 Tourist Visa Assistance</li>
+    <li>📦 Customized Holiday Packages</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🌐 Tourist Visa Services</h2>
+  <p>We provide assistance for:</p>
+  <p>🇨🇦 Canada | 🇦🇺 Australia | 🇬🇧 United Kingdom (London)</p>
+  <p>🇳🇿 New Zealand | 🇪🇺 Schengen Countries</p>
+</section>
+
+<section>
+  <h2>📩 Get Free Quote</h2>
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="text" id="phone" placeholder="Your Phone" required><br>
+    <input type="text" id="destination" placeholder="Destination (Dubai, Europe, etc)"><br>
+    <textarea id="message" placeholder="Your Travel Plan"></textarea><br>
+    <button class="btn" type="submit">Submit Inquiry</button>
+  </form>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <p>📞 <a href="tel:+917986802934">+91-79868-02934</a></p>
+  <p>📞 <a href="tel:+919988896737">+91-99888-96737</a></p>
+  <p>📧 <a href="mailto:Parastravelsolutions@gmail.com">Parastravelsolutions@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Paras Travel Solutions</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/917986802934?text=Hi%20I%20want%20travel%20details">💬</a>
+
+<script>
+function sendToWhatsApp(){
+  var name = document.getElementById('name').value;
+  var phone = document.getElementById('phone').value;
+  var destination = document.getElementById('destination').value;
+  var message = document.getElementById('message').value;
+
+  var url = "https://wa.me/917986802934?text="
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Destination: " + destination + "%0a"
+    + "Message: " + message;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
